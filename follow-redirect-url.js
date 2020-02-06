@@ -48,7 +48,8 @@ const _startFollowingRecursively = (url, options = {}, count = 1, visits = []) =
         timeout: request_timeout,
         headers: {
             'User-Agent': userAgent,
-            'Accept': 'text/html'
+            'Accept': 'text/html',
+            ...(options.headers || {}),
         }
     };
 
